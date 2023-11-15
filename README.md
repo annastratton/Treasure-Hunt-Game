@@ -1,25 +1,29 @@
-# Treasure-Hunt-Game
- 8-2 Portfolio Submission - CS-370-J7910 Current/Emerging Trends in CS 23EW4
+# Treasure Hunt Game Notebook Readme
 
-Briefly explain the work that you did on this project: What code were you given? What code did you create yourself?
+## Introduction
+Welcome to the Treasure Hunt Game Notebook! This readme file provides an overview of the code and instructions within this notebook. In this project, you will be working on implementing a deep Q-learning algorithm to create an intelligent agent (a pirate) that can find the treasure in a maze before it.
 
-This code imports various libraries and modules such as Keras, NumPy, and Matplotlib. The NumPy array shown here represents an 8x8 maze object. The function 'show' is a helper function that displays a visual representation of the maze object.
+## Project Overview
+The main goal of this project is to complete the deep Q-learning implementation for the pirate agent. The agent will learn how to navigate a maze to find the treasure while maximizing its reward. The provided code includes Python classes and functions to help you with this task.
 
-The pirate can move in four directions: left, right, up, and down, and is encouraged to explore the environment to find previously undiscovered paths. The exploration factor, epsilon, is set to 0.1, which means for every ten attempts, the pirate will attempt to learn by experience nine times and will randomly explore a new path one time. The 'actions_dict' dictionary and the 'num_actions' variable are used to map the pirate's four actions to numbers 0 to 3.
+## Code Structure
+The notebook is divided into sections that explain various aspects of the project and provide code blocks to help you complete the implementation. Here's a brief overview of the key sections:
 
-The 'play_game' function simulates a full game based on the provided trained model. It takes in the trained model, a TreasureMaze object, and the starting position of the pirate, and returns True if the pirate wins and False if the pirate loses.
+1. **Read and Review Your Starter Code**: This section introduces the project theme and provides an overview of the code you've been given, including the two main Python classes: `TreasureMaze` and `GameExperience`.
 
-The 'completion_check' function checks whether the pirate can win any game at all. It iterates through all of the free cells in the maze and checks whether a game can be won from each of those cells by calling the 'play_game' function.
+2. **Maze Representation**: This section defines the maze, which is represented as an 8x8 matrix. You'll find code to visualize the maze and the pirate's position within it.
 
-The 'build_model' function builds the neural network model. It has two hidden layers, each with 64 units and a PReLU activation function. The output layer has four units, one for each possible action the pirate can take, and uses a linear activation function. The optimizer used to train the model is RMSprop, and the loss function is mean squared error (MSE).
+3. **Agent Actions and Exploration**: This section explains how the pirate agent can move in four directions (left, right, up, and down) and introduces the concept of exploration (controlled by the exploration factor `epsilon`) versus exploitation.
 
-Connect your learning from throughout this course to the larger field of computer science:
-What do computer scientists do and why does it matter?
-How do I approach a problem as a computer scientist?
-What are my ethical responsibilities to the end user and the organization?
+4. **Functions for Game Simulation**: This section provides functions for simulating a game based on a trained model, checking if the pirate can win any game, and building the neural network model.
 
-I have come to understand that computer scientists play a crucial role in developing technology that can solve complex problems and automate tasks. Through this course, I have learned that computer scientists design algorithms, write code, and analyze data to create intelligent systems that can learn and improve over time.
+5. **Deep Q-learning Implementation**: This is the core section where you'll implement the deep Q-learning algorithm. The pseudocode is provided as a starting point, and you'll need to complete the implementation to train the pirate agent.
 
-To approach a problem as a computer scientist, I have learned to follow a systematic process of problem-solving. This process involves understanding the problem domain, identifying the input and output requirements, selecting appropriate data structures and algorithms, implementing the solution, and evaluating the results. By breaking down the problem into smaller components and analyzing each one, I can develop a solution that meets the desired specifications.
+6. **Test Your Model**: This section guides you through testing your deep Q-learning model. You'll visualize the maze, build and train the model, and check if it passes the completion check. Finally, you'll test the model in one game scenario.
 
-As a computer scientist, I have ethical responsibilities to the end user and the organization. I must ensure that the technology I develop is safe, reliable, and respects the privacy of the user. I must also ensure that my work is transparent, explainable, and free from bias. By following ethical standards and guidelines, I can ensure that my work has a positive impact on society and contributes to the greater good.
+7. **Save and Submit Your Work**: Instructions on how to save your work, include your name in the filename, and submit it for grading are provided in this section.
+
+## Getting Started
+To get started with this project, follow the instructions in each section of the notebook. Make sure to complete the deep Q-learning implementation in Section 5 to train the pirate agent effectively. Test your model as described in Section 6 to ensure it can navigate the maze and find the treasure.
+
+Good luck, and have fun implementing your pirate agent!
